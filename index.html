@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amero — Est. Chattogram</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- ========== HEADER / NAVBAR ========== -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="#home" class="logo">AMERO</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#products" class="nav-link">Shop</a>
+      <a href="#cart" class="nav-link">Cart <span class="cart-count" id="navCartCount">0</span></a>
+      <a href="#story" class="nav-link">Story</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="home">
+  <div class="sunburst"></div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Quality<br>Guaranteed<br>Since Day One</div>
+      <h1 class="hero-title">AMERO</h1>
+      <p class="hero-tagline script">stitched to last, not to trend</p>
+      <p class="hero-desc">Small-batch shirts and tees out of Chattogram — honest fabric, honest sizing, and no piece leaves the shop unless it earns the name.</p>
+      <a href="#products" class="btn btn-primary">Browse the Collection</a>
+    </div>
+  </div>
+</section>
+
+<div class="scallop"></div>
+
+<!-- ========== BRAND QUOTE / TRUST STATEMENT ========== -->
+<section class="brand-quote">
+  <div class="container">
+    <blockquote class="quote-text script">
+      "Quality isn't an afterthought — it's the standard we build every piece around."
+    </blockquote>
+    <p class="quote-sub">Premium Fabrics · Honest Sizing · Made in Small Batches</p>
+  </div>
+</section>
+
+<div class="scallop flip"></div>
+
+<!-- ========== PRODUCTS SECTION ========== -->
+<section class="products-section" id="products">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label script">the goods</p>
+      <h2 class="section-title">In Stock Now</h2>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <!-- Products are injected by JavaScript -->
+    </div>
+  </div>
+</section>
+
+<div class="scallop"></div>
+
+<!-- ========== CART SECTION ========== -->
+<section class="cart-section" id="cart">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label script">your selections</p>
+      <h2 class="section-title">Shopping Cart</h2>
+    </div>
+
+    <div class="cart-layout">
+      <!-- Cart Items -->
+      <div class="cart-items-wrap">
+        <div id="cartEmpty" class="cart-empty">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <p class="script cart-empty-script">Your cart is empty</p>
+          <a href="#products" class="btn btn-secondary">Browse the Collection</a>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+      </div>
+
+      <!-- Billing Summary -->
+      <div class="billing-wrap">
+        <div class="billing-card">
+          <h3 class="billing-title">Order Summary</h3>
+          <div class="billing-row">
+            <span>Subtotal</span>
+            <span id="billingSubtotal">৳0</span>
+          </div>
+          <div class="billing-row">
+            <span>Shipping</span>
+            <span id="billingShipping">Free</span>
+          </div>
+          <div class="billing-divider"></div>
+          <div class="billing-row billing-total">
+            <span>Total</span>
+            <span id="billingTotal">৳0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="scallop flip"></div>
+
+<!-- ========== STORY / ABOUT ========== -->
+<section class="story-section" id="story">
+  <div class="container story-inner">
+    <div class="story-frame"></div>
+    <div class="story-text">
+      <h2 class="section-title">Fewer Pieces.<br>Better Thread Count.</h2>
+      <p>Amero started with a simple complaint: most "premium" clothing isn't. Fabric gets thinner every season, sizing gets vaguer, and quality control quietly disappears.</p>
+      <p>So we kept it small. Every run is limited, every piece checked by hand, and once it's gone — it's gone. No restocks padded out with lower-grade fabric just to keep the listing alive.</p>
+      <p>What you see in the shop is what's actually sitting on the shelf. Nothing more.</p>
+    </div>
+  </div>
+</section>
+
+<div class="scallop"></div>
+
+<!-- ========== CHECKOUT / CONTACT SECTION ========== -->
+<section class="checkout-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label script">get in touch</p>
+      <h2 class="section-title">Checkout &amp; Contact</h2>
+    </div>
+
+    <div class="checkout-layout">
+      <form class="checkout-form" id="checkoutForm" novalidate>
+        <div class="form-group">
+          <label for="custName">Full Name <span class="required">*</span></label>
+          <input type="text" id="custName" name="custName" placeholder="Jane Doe" required />
+          <span class="form-error" id="errName">Please enter your name.</span>
+        </div>
+        <div class="form-group">
+          <label for="custPhone">Phone Number <span class="required">*</span></label>
+          <input type="tel" id="custPhone" name="custPhone" placeholder="01XXXXXXXXX" required />
+          <span class="form-error" id="errPhone">Please enter a valid phone number.</span>
+        </div>
+        <div class="form-group">
+          <label for="custAddress">Shipping Address <span class="required">*</span></label>
+          <input type="text" id="custAddress" name="custAddress" placeholder="123 Maple St, City, Country" required />
+          <span class="form-error" id="errAddress">Please enter your address.</span>
+        </div>
+        <div class="form-group">
+          <label for="deliveryArea">Delivery Area <span class="required">*</span></label>
+          <select id="deliveryArea" name="deliveryArea" required>
+            <option value="">Select delivery area</option>
+            <option value="chittagong">Inside Chittagong — ৳70</option>
+            <option value="outside">Outside Chittagong — ৳120</option>
+          </select>
+          <span class="form-error" id="errArea">Please choose a delivery area.</span>
+        </div>
+        <div class="form-group">
+          <label for="custNotes">Order Notes</label>
+          <textarea id="custNotes" name="custNotes" rows="4" placeholder="Special instructions for your order..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Payment Method <span class="required">*</span></label>
+          <div class="payment-options" id="paymentOptions">
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="cod" checked>
+              <span>Cash on Delivery</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="bkash">
+              <span>bKash</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="nagad">
+              <span>Nagad</span>
+            </label>
+          </div>
+        </div>
+        <div class="payment-instructions" id="paymentInstructions" style="display:none;">
+          <p id="paymentInstructionsText"></p>
+          <div class="form-group">
+            <label for="txnId">Transaction ID <span class="required">*</span></label>
+            <input type="text" id="txnId" name="txnId" placeholder="e.g. 8N7K2P1QRS">
+            <span class="form-error" id="errTxnId">Please enter the Transaction ID after sending payment.</span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Place Order</button>
+      </form>
+
+      <!-- Order Confirmation -->
+      <div class="order-confirmation" id="orderConfirmation">
+        <div class="confirmation-inner">
+          <i class="fa-solid fa-circle-check"></i>
+          <h3>Order Confirmed!</h3>
+          <p>Thank you, <strong id="confirmName"></strong>. Your order has been placed successfully.</p>
+          <p class="confirm-detail" id="confirmDetailText">We'll contact you at <span id="confirmPhone"></span> to confirm delivery details.</p>
+          <button class="btn btn-secondary" onclick="resetCheckout()">Continue Shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <h3 class="footer-logo">AMERO</h3>
+      <p class="footer-tagline">Small-batch premium clothing.</p>
+      <p class="footer-tagline">Chattogram, Bangladesh. Online store only.</p>
+    </div>
+    <div class="footer-contact">
+      <h4>Get In Touch</h4>
+      <ul>
+        <li><i class="fa-solid fa-envelope"></i> vexecclip@gmail.com</li>
+        <li><i class="fa-solid fa-phone"></i> 01880471287</li>
+        <li><i class="fa-solid fa-phone"></i> +880 1713-669707</li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Payment</h4>
+      <ul>
+        <li><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</li>
+        <li><i class="fa-solid fa-mobile-screen-button"></i> bKash</li>
+        <li><i class="fa-solid fa-mobile-screen-button"></i> Nagad</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 AMERO — Stitched to last.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
