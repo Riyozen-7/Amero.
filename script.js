@@ -100,7 +100,8 @@ const products = [
     img: 'images/product-6/front.jpg.jpg',
     images: [
       'images/product-6/front.jpg.jpg',
-      'images/product-6/close.jpg.jpg'
+      'images/product-6/close.jpg.jpg',
+      'images/product-6/side.jpg.jpg'
     ],
     sizes: [
       { size: 'M/L', stock: 1 }
